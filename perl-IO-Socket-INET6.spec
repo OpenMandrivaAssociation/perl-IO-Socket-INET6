@@ -13,6 +13,7 @@ BuildRequires:	perl-devel
 BuildArch:	noarch
 Provides:	perl-INET6
 Obsoletes:	perl-INET6
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 IO::Socket::INET6 provides an object interface to creating and using sockets in
