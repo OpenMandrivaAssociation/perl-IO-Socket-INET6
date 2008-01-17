@@ -3,15 +3,16 @@
 Summary:	Object interface for AF_INET|AF_INET6 domain sockets
 Name:		perl-%{module}
 Version:	2.51
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	BSD-like
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
 Source0:	http://search.cpan.org/CPAN/authors/id/M/MO/MONDEJAR/%{module}-%{version}.tar.bz2
+Patch0:		IO-Socket-INET6-Linux-fixes.patch
 BuildRequires:	perl-Socket6
 BuildRequires:	perl-devel
 BuildArch:	noarch
-Provides:	perl-INET6
+Provides:	perl-INET6 = %{version}-%{release}
 Obsoletes:	perl-INET6
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
@@ -23,6 +24,7 @@ inherits all the methods defined by IO::Socket.
 %prep
 
 %setup -q -n %{module}-%{version}
+%patch -p2
 
 %build
 
@@ -30,9 +32,8 @@ inherits all the methods defined by IO::Socket.
 
 %make
 
-# make test hangs at "t/io_sock6..........ok 11/20"
-# maybe it works as root?
-#make test
+%check
+make test
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
@@ -47,4 +48,3 @@ inherits all the methods defined by IO::Socket.
 %doc ChangeLog README
 %{perl_vendorlib}/IO/Socket/INET6.pm
 %{_mandir}/man3/*
-
