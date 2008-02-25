@@ -2,7 +2,7 @@
 
 Summary:	Object interface for AF_INET|AF_INET6 domain sockets
 Name:		perl-%{module}
-Version:	2.53
+Version:	2.54
 Release:	%mkrel 1
 License:	BSD-like
 Group:		Development/Perl
