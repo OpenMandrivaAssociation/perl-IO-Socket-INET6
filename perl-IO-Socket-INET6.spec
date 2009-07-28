@@ -1,17 +1,19 @@
-%define module	IO-Socket-INET6
+%define upstream_name	 IO-Socket-INET6
+%define upstream_version 2.56
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
 
 Summary:	Object interface for AF_INET|AF_INET6 domain sockets
-Name:		perl-%{module}
-Version:	2.56
-Release:	%mkrel 1
 License:	BSD-like
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/IO/%{module}-%{version}.tar.gz
+URL:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/IO/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl-Socket6
-BuildRequires:	perl-devel
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 IO::Socket::INET6 provides an object interface to creating and using sockets in
@@ -19,12 +21,10 @@ both AF_INET|AF_INET6 domain. It is built upon the IO::Socket interface and
 inherits all the methods defined by IO::Socket.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-
 %make
 
 %check
