@@ -1,5 +1,5 @@
 %define upstream_name	 IO-Socket-INET6
-%define upstream_version 2.56
+%define upstream_version 2.57
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
