@@ -1,9 +1,9 @@
 %define upstream_name	 IO-Socket-INET6
-%define upstream_version 2.65
+%define upstream_version 2.67
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 2
+Release:	%mkrel 1
 
 Summary:	Object interface for AF_INET|AF_INET6 domain sockets
 License:	BSD-like
