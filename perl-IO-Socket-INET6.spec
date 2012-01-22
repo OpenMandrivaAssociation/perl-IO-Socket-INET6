@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	%mkrel 3
+Release:	%mkrel 4
 
 Summary:	Object interface for AF_INET|AF_INET6 domain sockets
 License:	BSD-like
