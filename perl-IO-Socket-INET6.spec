@@ -1,14 +1,14 @@
 %define modname	IO-Socket-INET6
-%define modver	2.69
+%define modver 2.71
 
 Summary:	Object interface for AF_INET|AF_INET6 domain sockets
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	BSD-like
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/IO/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/IO/IO-Socket-INET6-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-Socket6
 BuildRequires:	perl-devel
@@ -35,4 +35,5 @@ make test
 %doc ChangeLog README
 %{perl_vendorlib}/IO
 %{_mandir}/man3/*
+
 

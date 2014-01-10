@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   IO-Socket-INET6-2.69.tar.gz: 821f574d51be0449f247f457034face990b7cf9c
+sources:
+  IO-Socket-INET6-2.71.tar.gz: 03336f5648143f71f3fdeef8dea2805b497da587
