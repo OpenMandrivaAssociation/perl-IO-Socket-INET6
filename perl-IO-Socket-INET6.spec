@@ -1,5 +1,5 @@
 %define modname	IO-Socket-INET6
-%define modver 2.71
+%define modver 2.72
 
 Summary:	Object interface for AF_INET|AF_INET6 domain sockets
 Name:		perl-%{modname}
@@ -35,5 +35,6 @@ make test
 %doc ChangeLog README
 %{perl_vendorlib}/IO
 %{_mandir}/man3/*
+
 
 
