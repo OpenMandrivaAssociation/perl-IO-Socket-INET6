@@ -12,7 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/IO/IO-Socket-INET6-%{modver}.tar.
 BuildArch:	noarch
 BuildRequires:	perl-Socket6
 BuildRequires:	perl-devel
-BuildRequires:  perl(Test)
+BuildRequires:  perl(Test::More)
 
 %description
 IO::Socket::INET6 provides an object interface to creating and using sockets in
