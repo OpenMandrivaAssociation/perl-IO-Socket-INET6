@@ -12,6 +12,7 @@ Source0:	http://www.cpan.org/modules/by-module/IO/IO-Socket-INET6-%{modver}.tar.
 BuildArch:	noarch
 BuildRequires:	perl-Socket6
 BuildRequires:	perl-devel
+BuildRequires:  perl-Test
 BuildRequires:  perl-Test-Simple
 
 %description
